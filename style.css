@@ -1,0 +1,36 @@
+ul{
+    padding-left: 0;
+    margin: 0 0;
+}
+nav{
+    padding: 25px 0;
+}
+nav .nav ul li {
+    display: inline-block;
+    padding: 0 15px 0 15px;
+}
+nav .nav ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    transition-property: color, text-shadow;
+    transition-duration: .2s, .3s;
+}
+nav .nav ul li a:hover{
+    color: orange;
+    text-shadow: #FC0 1px 0 10px;
+}
+main h1{
+    text-align: center;
+    padding: 12px 0;
+}
+aside h2{
+    text-align: center;
+    padding: 12px 0;
+}
+footer{
+    text-align: center;
+    font-size: 8px;
+}
+footer p{
+    width: 60%;
+}
