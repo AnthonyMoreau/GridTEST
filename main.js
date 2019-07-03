@@ -12,7 +12,6 @@ insert.appendChild(style);
 let width = window.innerWidth;
 
 //variables
-
 let template_grid_columns = undefined;
 let grid_template_rows = undefined;
 let grid = undefined;
@@ -21,11 +20,16 @@ let font_base = undefined;
 let nav_align = undefined;
 let height = undefined;
 
+//font_size
+let small_font = '12px';
+let medium_font = '15px';
+let large_font = '18px';
+
     if(width > 1600){
 
         height = "100vh";
-        font_base = "18px";
         nav_align = "center";
+        font_base = large_font;
         template_grid_columns = "1fr 1fr 1fr 1fr";
         grid_template_rows = "0.5fr 3.3fr 0.2fr";
         grid = "head head head head " +"\" \""+ " aside main main main" +"\" \""+ " footer footer footer footer ";
@@ -33,8 +37,8 @@ let height = undefined;
     if(width < 1600 && width > 800){
 
         height = "100vh";
-        font_base = '15px';
         nav_align = "center";
+        font_base = medium_font;
         template_grid_columns = "1fr 1fr 1fr 1fr";
         grid_template_rows = "0.3fr 1.75fr 1.75fr 0.2fr";
         grid = "head head head head " +"\" \""+ " main main main main" +"\" \""+ " aside aside aside aside " +"\" \""+ " footer footer footer footer ";
@@ -43,7 +47,7 @@ let height = undefined;
 
         height = "auto";
         nav_align = "center";
-        font_base = '12px';
+        font_base = small_font;
         template_grid_columns = "1fr 1fr 1fr 1fr";
         grid_template_rows = "auto auto auto auto";
         grid = "head head head head " +"\" \""+ " aside aside aside aside" +"\" \""+ " main main main main " +"\" \""+ " footer footer footer footer ";
@@ -96,6 +100,5 @@ let height = undefined;
         justify-content: center;
         align-content: center;
     }
-
     `
 console.log(insert)
