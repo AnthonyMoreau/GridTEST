@@ -1,8 +1,9 @@
 function select(element, all){
     if(all != undefined){
         return document.querySelectorAll(element)
+    } else {
+        return document.querySelector(element)
     }
-    return document.querySelector(element)
 }
 let insert = select('head');
 let style = document.createElement('style');
@@ -21,6 +22,7 @@ let height = undefined;
 
 //screen
 let large_screen = 1600;
+let medium_screen = undefined;
 let small_screen = 800;
 
 // grid system
@@ -56,7 +58,7 @@ let large_font = '19px';
     // small screen
     if(width < small_screen){
 
-        height = "auto";
+        height = "100vh";
         nav_align = "center";
         font_base = small_font;
         template_grid_columns = "1fr 1fr 1fr 1fr";
