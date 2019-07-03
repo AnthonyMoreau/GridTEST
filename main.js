@@ -4,7 +4,6 @@ function select(element, all){
     }
     return document.querySelector(element)
 }
-
 let insert = select('head');
 let style = document.createElement('style');
 insert.appendChild(style);
@@ -20,37 +19,49 @@ let font_base = undefined;
 let nav_align = undefined;
 let height = undefined;
 
+//screen
+let large_screen = 1600;
+let small_screen = 800;
+
+// grid system
+let large_grid = "head head head head " +"\" \""+ " aside main main main" +"\" \""+ " footer footer footer footer ";
+let medium_grid = "head head head head " +"\" \""+ " main main main main" +"\" \""+ " aside aside aside aside " +"\" \""+ " footer footer footer footer ";
+let small_grid = "head head head head " +"\" \""+ " aside aside aside aside" +"\" \""+ " main main main main " +"\" \""+ " footer footer footer footer ";
+
 //font_size
 let small_font = '12px';
 let medium_font = '15px';
-let large_font = '18px';
+let large_font = '19px';
 
-    if(width > 1600){
+    // large screen
+    if(width >= large_screen){
 
         height = "100vh";
         nav_align = "center";
         font_base = large_font;
         template_grid_columns = "1fr 1fr 1fr 1fr";
         grid_template_rows = "0.5fr 3.3fr 0.2fr";
-        grid = "head head head head " +"\" \""+ " aside main main main" +"\" \""+ " footer footer footer footer ";
+        grid = large_grid;
     }
-    if(width < 1600 && width > 800){
+    // medium screen
+    if(width < large_screen && width >= small_screen){
 
         height = "100vh";
         nav_align = "center";
         font_base = medium_font;
         template_grid_columns = "1fr 1fr 1fr 1fr";
         grid_template_rows = "0.3fr 1.75fr 1.75fr 0.2fr";
-        grid = "head head head head " +"\" \""+ " main main main main" +"\" \""+ " aside aside aside aside " +"\" \""+ " footer footer footer footer ";
+        grid = medium_grid;
     }
-    if(width <= 800){
+    // small screen
+    if(width < small_screen){
 
         height = "auto";
         nav_align = "center";
         font_base = small_font;
         template_grid_columns = "1fr 1fr 1fr 1fr";
         grid_template_rows = "auto auto auto auto";
-        grid = "head head head head " +"\" \""+ " aside aside aside aside" +"\" \""+ " main main main main " +"\" \""+ " footer footer footer footer ";
+        grid = small_grid;
     }
 
     style.innerHTML = 
@@ -101,4 +112,4 @@ let large_font = '18px';
         align-content: center;
     }
     `
-console.log(insert)
+;

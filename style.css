@@ -17,7 +17,7 @@ nav .nav ul li a{
 }
 nav .nav ul li a:hover{
     color: orange;
-    text-shadow: #FC0 1px 0 10px;
+    text-shadow: #FC0 1px 0 12px;
 }
 main h1{
     text-align: center;
@@ -30,7 +30,4 @@ aside h2{
 footer{
     text-align: center;
     font-size: 8px;
-}
-footer p{
-    width: 60%;
 }
